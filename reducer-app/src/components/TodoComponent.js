@@ -1,16 +1,19 @@
 import React from 'react';
+import './todocomponent.styles.css'
+
+
 
 const Todo = props => {
   const {toggleComplete} = props;
   const { id, item, completed } = props.todo;
 console.log(props.todo)
   return (
-    <li
-      style={{ textDecoration: completed ? 'line-through' : 'none' }}
+    <div className='test'><h5
+      style= {{background: completed ? 'rgb(188,70,40, .9)' : 'none' }}
       onClick={() => toggleComplete(id)}
     >
       {item}
-    </li>
+    </h5></div>
   );
 };
 
